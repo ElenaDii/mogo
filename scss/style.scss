@@ -1,0 +1,340 @@
+@import "_normalize";
+@import "_layout";
+@import "_fonts";
+@import "slick";
+@import "slick-theme";
+body {
+  width: 1920px;
+  min-width: 100vw;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+.ba-container {
+  max-width: 1200px;
+}
+
+.logo {
+  padding-top: 32px;
+  font-size: 30px;
+  font-weight: 700;
+  margin-left: 12px;
+}
+
+.section {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  &--banner {
+    background-image: url(../img/bg-banner.jpg);
+    color: #ffffff;
+  }
+  &--facts {
+    background-color: #95e1d3;
+  }
+  &--feauture {
+    background-image: url(../img/feauture.jpg);
+    height: 850px;
+  }
+  &--quote {
+    background-color: #f8f8f8;
+  }
+}
+
+.menu {
+  padding-top: 35px;
+  position: static;
+  list-style: none;
+  &__item {
+    color: inherit;
+    text-decoration: none;
+    margin-right: 55px;
+    float: left;
+    a {
+      font-weight: 400;
+      color: inherit;
+      text-decoration: none;
+      text-transform: uppercase;
+      &:active {
+        color: #fce38a;
+      }
+      &:hover {
+        color: #fce38a;
+        border-bottom: 3px solid;
+        padding-bottom: 5px;
+      }
+    }
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.header {
+  padding-bottom: 224px;
+  margin-left: -20px;
+}
+
+.slider {
+  text-align: center; // padding-bottom: 230px;
+}
+
+.slide {
+  padding-bottom: 40px;
+  &__title {
+    font-family: "Kaushan Script", cursive;
+    margin: 0;
+    font-size: 72px;
+    font-weight: 400;
+    padding-bottom: 25px;
+    font-weight: 700;
+  }
+  &__description {
+    margin: 0 auto;
+    font-size: 143px;
+    font-weight: 700;
+    line-height: 140px;
+    width: 802px;
+    text-transform: uppercase;
+    padding-bottom: 71px;
+    &--quote {
+      font-family: "Roboto";
+      color: #999999;
+      font-size: 24px;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 36px;
+      float: right;
+      position: relative;
+    }
+  }
+  &__button {
+    text-decoration: none;
+    border-style: solid;
+    border-width: 3px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    width: 160px;
+    height: 40px;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    padding: 9px 29px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  &__line {
+    width: 60px;
+    height: 3px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    margin-bottom: 50px;
+  }
+  &__name {
+    font-family: "Kaushan Script", cursive;
+    color: #333333;
+    font-size: 24px;
+    position: absolute;
+  }
+  &__icon {
+    float: left;
+    border: 3px solid #95e1d3;
+    padding: 44px;
+  }
+}
+
+.content {
+  text-align: center;
+  padding-top: 90px;
+  &--about {
+    margin: 0 auto;
+    padding-bottom: 104px;
+    padding-top: 57px;
+  }
+  &--services {
+    padding-bottom: 5px;
+  }
+  &--feauture {
+    padding-top: 103px;
+  }
+  &--service {
+    padding-top: 104px;
+    padding-bottom: 95px;
+  }
+  &__title {
+    font-family: "Kaushan Script", cursive;
+    padding-bottom: 8px;
+    margin: 0;
+    font-size: 24px;
+  }
+  &__description {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 33px;
+    margin: 0;
+  }
+  &__line {
+    background-color: #f38181;
+    width: 60px;
+    height: 3px;
+    margin: 0 auto;
+    margin-bottom: 46px;
+  }
+  &__text {
+    font-size: 15px;
+    margin: 0;
+  }
+  &__more {
+    text-decoration: none;
+    border-style: solid;
+    border-width: 3px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    width: 160px;
+    height: 40px;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    padding: 15px 32px;
+    text-transform: uppercase;
+  }
+}
+
+.about {
+  padding-bottom: 96px;
+  &__item {
+    position: relative;
+  }
+  &__text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 380px;
+    height: 247px;
+    color: #fff;
+    background-color: linear-gradient(to top right #e98283, #f0d48a);
+    z-index: 10;
+    text-align: center;
+    line-height: 150px;
+    opacity: 0;
+    transition: all 0.25s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &__img {
+    background-color: #00b1b1;
+    &--01 {
+      width: 380px;
+      height: 247px;
+    }
+  }
+}
+
+.facts {
+  padding: 0;
+  color: #ffffff;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-bottom: 88px;
+  &__item {
+    width: 240px;
+    text-align: center;
+  }
+  &__numbers {
+    margin: 0;
+    padding-top: 71px;
+    padding-bottom: 8px;
+    font-size: 72px;
+    font-weight: 700;
+  }
+  &__description {
+    text-transform: uppercase;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding-inline-start: 0;
+}
+
+.services {
+  position: static;
+  padding-bottom: 10px;
+  &__item {
+    display: inline-block;
+    width: 33%;
+  }
+  &__icon {
+    padding-left: 30px;
+    float: left;
+  }
+  &__title {
+    font-size: 13px;
+    text-transform: uppercase;
+    margin: 0 90px 10px;
+  }
+  &__text {
+    font-family: "Roboto", sans-serif;
+    color: #999999;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0 20px 96px 88px;
+  }
+}
+
+.ipad {
+  margin-left: 337px;
+  position: absolute;
+}
+
+.iphone {
+  position: relative;
+  bottom: -200px;
+  left: 700px;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  margin: 0 -10px;
+}
+
+.item {
+  padding: 0;
+  position: relative;
+  border: 1px solid lightgrey;
+  margin-bottom: 10px;
+  &__icon {
+    position: absolute;
+    cursor: pointer;
+    padding: 15px;
+  }
+  &__title {
+    text-transform: uppercase;
+    padding: 20px 13px 19px 56px;
+    margin: 0;
+    cursor: pointer;
+    font-size: 14px;
+    border-bottom: 1px solid lightgrey;
+  }
+  &__description {
+    padding: 14px 40px 21px 17px;
+    font-family: Roboto;
+    color: #999999;
+    font-size: 15px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 24px;
+  }
+  &:not(.item--notes) > .item__description {
+    display: none;
+  }
+}
