@@ -20,4 +20,23 @@ $(document).ready(function() {
     autoplay: true,
     autoplaySpeed: 4000
   });
+
+  $(".ba-works").isotope({
+    // options
+    itemSelector: ".ba-grid-item",
+
+    percentPosition: true,
+    masonry: {
+      columnWidth: ".ba-sizer"
+    }
+  });
+  const $map = $("#map");
+  var London = { lat: 51.507351, lng: -0.127758 };
+  // The map, centered at London
+  var map = new google.maps.Map($map[0], {
+    zoom: 15,
+    center: London
+  });
+  // The marker, positioned at London
+  var marker = new google.maps.Marker({ position: London, map: map });
 });
