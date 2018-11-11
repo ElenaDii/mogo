@@ -90,10 +90,7 @@ body {
 }
 
 .header {
-    position: fixed;
     display: inline-block;
-    background: #e98784;
-    z-index: 2;
     padding-bottom: 10px;
     background-size: cover;
     width: 100%;
@@ -138,6 +135,10 @@ body {
         padding: 9px 29px;
         text-transform: uppercase;
         margin-bottom: 20px;
+        &:hover {
+            color: #e98283;
+            background-color: #fff;
+        }
     }
     &__line {
         width: 60px;
